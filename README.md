@@ -1,101 +1,94 @@
-## Instagram-AI-Agent 🌸
+## Riona-AI-Agent 🌸
 
-Instagram-AI-Agent is an AI-powered automation tool designed for **Instagram** to automate social media interactions such as posting, liking, and commenting. It leverages advanced AI models to generate engaging content, automate interactions, and manage Instagram accounts efficiently.
+Riona-AI-Agent é uma ferramenta de automação alimentada por IA, projetada para interagir com várias plataformas de mídia social, como Instagram, Twitter e GitHub. Ela utiliza modelos avançados de IA para gerar conteúdo envolvente, automatizar interações e gerenciar contas de mídia social de forma eficiente.
 
-Before using the automation features, you can personalize the agent by training with the following, including:
+Antes de usar as funcionalidades de automação, você pode treinar o agente com conteúdo personalizado. Você pode fazer o upload do seu conteúdo por meio de um dos seguintes:
 
-- **YouTube Video URL** 🎥
-- **Audio File** 🎙️
-- **Portfolio or Website Link** 🌐
-- **File Formats Supported**: PDF, DOC, DOCX, TXT 📄
+- **URL de vídeo do YouTube** 🎥
+- **Arquivo de áudio** 🎙️
+- **Portfólio ou link do site** 🌐
+- **Formatos de arquivo suportados: PDF, DOC, DOCX, TXT** 📄
 
-## Features
+## Funcionalidades
 
-- **Instagram Automation**: Automatically log in, post photos, like posts, and leave thoughtful comments.
-- **AI-Powered Content Generation**: Use Google Generative AI to create engaging captions and comments.
-- **Proxy Support**: Use proxies to manage multiple accounts and avoid rate limits.
-- **Cookie Management**: Save and load cookies to maintain sessions across restarts.
+- **Automação no Instagram:** Fazer login automaticamente, curtir postagens e deixar comentários reflexivos.
+- **Automação no Twitter:** (Em breve) Tuitar, retuitar e curtir tweets automaticamente.
+- **Automação no GitHub:** (Em breve) Gerenciar repositórios, issues e pull requests automaticamente.
+- **Geração de conteúdo com IA:** Usar o Google Generative AI para gerar comentários e postagens envolventes.
+- **Suporte a proxies:** Usar proxies para gerenciar várias contas e evitar limites de taxa.
+- **Gerenciamento de cookies:** Salvar e carregar cookies para manter sessões entre reinicializações.
 
-**Upcoming Features:**
+## Instalação
 
-- **Twitter Automation**: (Coming soon) Automatically tweet, retweet, and like tweets.
-- **GitHub Automation**: (Coming soon) Automatically manage repositories, issues, and pull requests.
+1. **Clone o repositório**:
+    ```sh
+    git clone https://github.com/david-patrick-chuks/Riona-AI-Agent.git
+    cd Riona-AI-Agent
+    ```
 
-## Installation
+2. **Instale as dependências**:
+    ```sh
+    npm install
+    ```
 
-1. **Clone the repository**:
+3. **Configuração das variáveis de ambiente**:
+    Renomeie o arquivo [.env.example](http://_vscodecontentref_/1) para o arquivo [.env](http://_vscodecontentref_/1)  no diretório raiz e adicione suas credenciais e chaves de API (opcional). Consulte o arquivo [.env.example](http://_vscodecontentref_/2) para as variáveis necessárias.
+    ```dotenv
+    # Instagram credentials
+    IGusername=your_instagram_username
+    IGpassword=your_instagram_password
 
-   ```sh
-   git clone https://github.com/david-patrick-chuks/Instagram-AI-Agent.git
-   cd Instagram-AI-Agent
-   ```
+    # Twitter credentials
+    Xusername=your_twitter_username
+    Xpassword=your_twitter_password
 
-2. **Install dependencies**:
+    ```
 
-   ```sh
-   npm install
-   ```
+## Uso
 
-3. **Set up environment variables**:
-   Rename the [.env.example](http://_vscodecontentref_/1) file to [.env](http://_vscodecontentref_/1) in the root directory and add your Instagram credentials. Refer to the [.env.example](http://_vscodecontentref_/2) file for the required variables.
-   ```dotenv # Instagram credentials
-   IGusername=your_instagram_username
-   IGpassword=your_instagram_password 
-   
-   Xusername= #Twitter username
-   Xpassword= #Twitter password
+1. **Execute o agente**:
+    ```sh
+    npm start
+    ```
 
-   MONGODB_URI= #MongoDB URI
-   ```
+<!-- 2. **Execute o agente do Twitter** (Em breve):
+    ```sh
+    npm run start:twitter
+    ```
 
-## Usage
+3. **Execute o agente do GitHub** (Em breve):
+    ```sh
+    npm run start:github
+    ``` -->
 
-1. **Run the Instagram agent**:
-   ```sh
-   npm start
-   ```
+## Estrutura do Projeto
 
-**Upcoming Features:**
+- **src/client**: Contém a lógica principal para interagir com plataformas de mídia social.
+- **src/config**: Arquivos de configuração, incluindo a configuração do logger.
+- **src/utils**: Funções utilitárias para lidar com erros, cookies, etc.
+- **src/schema**: Definições de esquemas para conteúdo gerado pela IA.
 
-- **Run the Twitter agent** (Coming soon):
+## Logs
 
-  ```sh
-  npm run start:twitter
-  ```
+O projeto utiliza um logger personalizado para registrar informações, avisos e erros. Os logs são salvos no diretório [logs](http://_vscodecontentref_/3).
 
-- **Run the GitHub agent** (Coming soon):
-  ```sh
-  npm run start:github
-  ```
+## Tratamento de Erros
 
-## Project Structure
+Manipuladores de erro a nível de processo são configurados para capturar rejeições de promessas não tratadas, exceções não capturadas e avisos de processo. Os erros são registrados usando o logger personalizado.
 
-- **src/client**: Contains the main logic for interacting with social media platforms like Instagram.
-- **src/config**: Configuration files, including the logger setup.
-- **src/utils**: Utility functions for handling errors, cookies, data saving, etc.
-- **src/Agent**: Contains the AI agent logic and training scripts.
-- **src/Agent/training**: Training scripts for the AI agent.
-- **src/schema**: Schema definitions for AI-generated content and database models.
-- **src/test**: Contains test data and scripts, such as example tweets.
+## Contribuições
 
-## Logging
+Contribuições são bem-vindas! Por favor, faça um fork do repositório e envie um pull request com suas mudanças.
 
-The project uses a custom logger to log information, warnings, and errors. Logs are saved in the [logs](http://_vscodecontentref_/3) directory.
+## Licença
 
-## Error Handling
+Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-Process-level error handlers are set up to catch unhandled promise rejections, uncaught exceptions, and process warnings. Errors are logged using the custom logger.
+## Agradecimentos
 
-## Contributing
+- [Google Generative AI](https://ai.google/tools/) por fornecer modelos de AI.
+- [Puppeteer](https://github.com/puppeteer/puppeteer) para automação do navegador.
+- [puppeteer-extra](https://github.com/berstend/puppeteer-extra) para plugins adicionais e melhorias
 
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgements
-
-- [Google Generative AI](https://ai.google/tools/) for providing the AI models.
-- [Puppeteer](https://github.com/puppeteer/puppeteer) for browser automation.
-- [puppeteer-extra](https://github.com/berstend/puppeteer-extra) for additional plugins and enhancements.
+---
